@@ -1,0 +1,11 @@
+apps[server] = "development"
+apps[manifests][] = "app/manifest.app"
+apps[theme_default] = "openinternational_theme"
+core = "7.x"
+
+description = "Feature Module for the OpenInternational Theme"
+
+
+name = "OpenInternational Module"
+package = "Features"
+php = "5.2.4"

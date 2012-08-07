@@ -1,0 +1,12 @@
+name = OpenInternational Theme
+description = A theme designed for government agencies across the world, bundled with feature overrides. 
+machine_name = openinternational_app
+version = 1.0
+downloadable = openinternational_app 1.0
+author = Phase2 Techonology
+author_url = http://www.phase2technology.com
+;screenshots[] = screenshot.jpg
+;screenshots[] = screenshot2.jpg
+;logo = logo.png
+dependencies[views] = views 3.3
+dependencies[ctools] = ctools 1.0-rc2

@@ -1,0 +1,76 @@
+/* This file will hold styles that are loaded using the same media query as the normal grid. */
+/*
+ * Page backgrounds
+ */
+.breaking-news span.read-more {
+    display: block;
+}
+
+.home-top-intro {
+    text-indent: 0;
+    font-size: 15px;
+    margin: 0 50px;
+}
+
+.block-breadcrumb {
+}
+
+.block-addthis {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+/*
+ * Adjustments for thinner width
+ *
+ */
+body.not-front div.openinternational-outside-wrapper {
+    width: 960px;
+    margin: auto;
+}
+
+body.not-front div.openinternational-outside-wrapper div.zone-wrapper {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+body.not-front div.openinternational-outside-wrapper div.container-16 {
+    width: auto;
+}
+
+body.not-front div.openinternational-outside-wrapper #region-content, 
+body.not-front div.openinternational-outside-wrapper #region-sidebar-second {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+body.not-front div.openinternational-outside-wrapper div.container-16 #region-content .region-inner {
+    margin-left: 40px;
+    margin-right: 60px;
+}
+
+body.not-front div.openinternational-outside-wrapper div.container-16 #region-sidebar-second {
+    width: 31%;
+    width: 298px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

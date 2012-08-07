@@ -1,0 +1,145 @@
+/**
+ *  This CSS file (THEME-alpha-default.css) contains styles that applies to ALL the responsive layouts
+ *  Unlike global.css (the global, including mobile layout CSS file), THEME-alpha-default.css is only
+ *  used on any size ABOVE mobile, which translates to all the responsive sizes of your mobile-first theme.
+ *
+ *  Any CSS included here will be used in your narrow, normal, wide, AND fluid grids, depending on which you
+ *  have enabled in your theme settings.
+ *  So this CSS will provide global styles for everything EXCEPT the default, mobile-first layout.
+ */
+/* search form */
+.block-search-form {
+    position: absolute;
+    top: 60px;
+    width: 395px;
+    text-align: right;
+}
+
+/*
+.block-search-form .container-inline {
+    vertical-align: top;
+}
+*/
+
+.block-search-form input.form-text, .block-search-form input[type = text] {
+    height: 12px;
+    width: 190px;
+    z-index: 1;
+    background: url("../img/sprite.png") no-repeat 3px -653px transparent;
+    padding-right: 25px;
+    padding-left: 30px;
+	   position: relative;
+    right: -17px;
+    top: -5px;
+}
+
+#section-header .block-search-form div.form-item-search-block-form {
+    position: relative;
+    width: 350px;
+}
+
+#section-header .block-search-form div.form-actions {
+}
+
+form#search-block-form input.form-submit {
+    border: none;
+    cursor: pointer;
+    height: 30px;
+    line-height: 0;
+    position: relative;
+    float: right;
+    z-index: 2;
+    margin: 0;
+}
+
+/*
+ * Home page rotator
+ */
+.view-home-page-feature-rotator {
+    margin-left: 0;
+    width: 100%;
+}
+
+#home-rotator {
+    width: 100%;
+    padding: 0;
+    min-height: 300px;
+}
+
+.home-top-intro {
+    /* This is only hidden actually during the fluid layout, 960 size overwrites it again to show the subtext */
+    font-size: 0;
+    text-align: center;
+    font-style: italic;
+}
+
+.block .content .home-top-intro h2 {
+    font-size: 28px;
+    text-transform: none;
+    padding: 0;
+}
+
+.home-top-intro h2 a:link, .home-top-intro h2 a:visited {
+    font-size: 24px;
+    line-height: 27px;
+}
+
+.home-rotator-slide {
+    width: 100%;
+    margin: 0;
+}
+
+.home-rotator-text-block {
+    border-left: 1px solid white;
+    float: right;
+    height: 280px;
+    margin: 1% 0 1% 0;
+    padding: 0;
+    width: 44.38%;
+}
+
+.home-rotator-photo {
+    float: right;
+    width: 55.31914893617%;
+    margin: 1% 0;
+    overflow: hidden;
+}
+
+.home-rotator-photo {
+    float: left;
+}
+
+.home-rotator-photo img, .home-rotator-slide img {
+    width: auto;
+    margin: 0;
+}
+
+/*
+ * Breaking News
+ */
+.breaking-news {
+    height: 45px;
+}
+
+.breaking-news .headline {
+    width: 65%;
+}
+
+.breaking-news .breaking-news-header {
+    background: url("../img/sprite.png") no-repeat scroll 0 -278px transparent;
+    border-right: 1px solid #FFFFFF;
+    font-size: 16px;
+    line-height: 17px;
+    margin: 0 20px;
+    padding: 7px 9px 5px 30px;
+    visibility: visible;
+    width: 102px;
+}
+
+.breaking-news .headline a {
+    font-size: 13px;
+    height: 11px;
+    padding: 13px 0;
+    text-decoration: none;
+}
+
