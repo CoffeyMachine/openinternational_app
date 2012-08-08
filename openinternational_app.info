@@ -2,10 +2,17 @@ apps[server] = "development"
 apps[manifests][] = "app/manifest.app"
 apps[theme_default] = "openinternational_theme"
 core = "7.x"
-
 description = "Feature Module for the OpenInternational Theme"
 
+dependencies[] = image
+dependencies[] = openpublic_services
+features[features_api][] = api:1
+features[features_override_items][] = views_view.services
+features[features_overrides][] = views_view.services.display|block_1|display_options|defaults
+features[features_overrides][] = views_view.services.display|block_1|display_options|fields
+features[features_overrides][] = views_view.services.display|page_1|display_options|fields|view_node|table
+features[image][] = openinternational-services-carousel
 
-name = "OpenInternational Module"
+name = "OpenInternational App"
 package = "Features"
 php = "5.2.4"
