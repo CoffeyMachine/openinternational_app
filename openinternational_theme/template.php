@@ -74,7 +74,7 @@ function openinternational_theme_preprocess_region(&$vars) {
 		  $vars['footer_menu'] = $footer_menu;
 		  
 		  $vars['site_name'] = $site_name = variable_get('site_name');
-		  $vars['footer_logo'] = l(theme('image', array('path'=>drupal_get_path('theme', 'openinternational') . "/logo-sm.png", 'alt'=>"$site_name logo")), '', array("html"=>TRUE, 'attributes'=>array('class'=>'logo')));
+		  $vars['footer_logo'] = l(theme('image', array('path'=>drupal_get_path('theme', 'openinternational_theme') . "/logo-sm.png", 'alt'=>"$site_name logo")), '', array("html"=>TRUE, 'attributes'=>array('class'=>'logo')));
 		  
 		  if(function_exists('defaultcontent_get_node') && ($node = defaultcontent_get_node("email_update")) ) {
 			  $node = node_view($node);
