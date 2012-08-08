@@ -17,7 +17,7 @@
   *
   * Needs moved to module since theme isn't used for admin, but keeping here for reference
   */ 
-function openinternational_system_themes_page_alter(&$theme_groups) {
+function openinternational_theme_system_themes_page_alter(&$theme_groups) {
 	$hidden = array(
 	  'alpha', 'omega',
 	);
@@ -32,7 +32,7 @@ function openinternational_system_themes_page_alter(&$theme_groups) {
 	}
 }
 
-function openinternational_preprocess_region(&$vars) {
+function openinternational_theme_preprocess_region(&$vars) {
   global $language;
   switch($vars['region']) {
     // menu region
@@ -42,7 +42,7 @@ function openinternational_preprocess_region(&$vars) {
 		    $footer_menu = $footer_menu_cache->data;
 		  }
 		  else {
-		    $footer_menu = menu_tree_output(_openinternational_menu_build_tree('main-menu', array('max_depth'=>2)));
+		    $footer_menu = menu_tree_output(_openinternational_theme_menu_build_tree('main-menu', array('max_depth'=>2)));
 		    cache_set("footer_menu_data:". $language->language, $footer_menu);
 		  }
 		  //set the active trail
@@ -61,7 +61,7 @@ function openinternational_preprocess_region(&$vars) {
 		    $footer_menu = $footer_menu_cache->data;
 		  }
 		  else {
-		    $footer_menu = menu_tree_output(_openinternational_menu_build_tree('main-menu', array('max_depth'=>2)));
+		    $footer_menu = menu_tree_output(_openinternational_theme_menu_build_tree('main-menu', array('max_depth'=>2)));
 		    cache_set("footer_menu_data:". $language->language, $footer_menu);
 		  }
 		  //set the active trail
@@ -89,12 +89,12 @@ function openinternational_preprocess_region(&$vars) {
   }
 }
 /* Fix the horrid menu_tree theme function to clearfix since most LI's are floated */
-function openinternational_menu_tree($variables) {
+function openinternational_theme_menu_tree($variables) {
   return '<ul class="menu clearfix">' . $variables['tree'] . '</ul>';
 }
 
 /* Add the 'clearfix' class to all unformatted views rows */
-function openinternational_preprocess_views_view_unformatted(&$vars) { 
+function openinternational_theme_preprocess_views_view_unformatted(&$vars) { 
 
   foreach($vars['classes'] as &$rowclasses) {
     $rowclasses[] = 'clearfix';
@@ -104,7 +104,7 @@ function openinternational_preprocess_views_view_unformatted(&$vars) {
 
 
 
-function _openinternational_menu_build_tree($menu_name, $parameters = array()) {
+function _openinternational_theme_menu_build_tree($menu_name, $parameters = array()) {
   $tree = menu_build_tree($menu_name, $parameters);
   if (function_exists('i18n_menu_localize_tree')) {
     $tree = i18n_menu_localize_tree($tree);
@@ -119,7 +119,7 @@ function _openinternational_menu_build_tree($menu_name, $parameters = array()) {
  * Implements hook_preprocess_block().
  */
 /*
-function openinternational_preprocess_block(&$vars) {
+function openinternational_theme_preprocess_block(&$vars) {
 	
 	if(drupal_is_front_page()){
 		if (strstr($vars["block"]->region, 'preface_')) {
