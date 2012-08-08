@@ -5,6 +5,43 @@
  */
 
 /**
+ * Implements hook_context_default_contexts_alter().
+ */
+function openinternational_app_context_default_contexts_alter(&$data) {
+  if (isset($data['home'])) {
+    $data['home']->reactions['block']['blocks']['twitter_pull-0']['delta'] = '0'; /* WAS: 0 */
+    $data['home']->reactions['region']['openinternational_theme'] = array(
+      'disable' => array(
+        'content' => 'content',
+        'sidebar_first' => 'sidebar_first',
+        'sidebar_second' => 'sidebar_second',
+        'page_top' => 0,
+        'page_bottom' => 0,
+        'user_first' => 0,
+        'user_second' => 0,
+        'branding' => 0,
+        'menu' => 0,
+        'header_first' => 0,
+        'header_second' => 0,
+        'preface_first' => 0,
+        'preface_second' => 0,
+        'preface_third' => 0,
+        'postscript_first' => 0,
+        'postscript_second' => 0,
+        'postscript_third' => 0,
+        'postscript_fourth' => 0,
+        'footer_first' => 0,
+        'footer_second' => 0,
+        'dashboard_main' => 0,
+        'dashboard_sidebar' => 0,
+        'dashboard_inactive' => 0,
+      ),
+    ); /* WAS: '' */
+    unset($data['home']->reactions['region']['spartan']);
+  }
+}
+
+/**
  * Implements hook_views_default_views_alter().
  */
 function openinternational_app_views_default_views_alter(&$data) {

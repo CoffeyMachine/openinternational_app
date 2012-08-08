@@ -11,6 +11,37 @@ function openinternational_app_features_override_default_overrides() {
   // This code is only used for UI in features. Exported alters hooks do the magic.
   $overrides = array();
 
+  // Exported overrides for: context
+  $overrides["context.home.reactions|block|blocks|twitter_pull-0|delta"] = '0';
+  $overrides["context.home.reactions|region|openinternational_theme"] = array(
+    'disable' => array(
+      'content' => 'content',
+      'sidebar_first' => 'sidebar_first',
+      'sidebar_second' => 'sidebar_second',
+      'page_top' => 0,
+      'page_bottom' => 0,
+      'user_first' => 0,
+      'user_second' => 0,
+      'branding' => 0,
+      'menu' => 0,
+      'header_first' => 0,
+      'header_second' => 0,
+      'preface_first' => 0,
+      'preface_second' => 0,
+      'preface_third' => 0,
+      'postscript_first' => 0,
+      'postscript_second' => 0,
+      'postscript_third' => 0,
+      'postscript_fourth' => 0,
+      'footer_first' => 0,
+      'footer_second' => 0,
+      'dashboard_main' => 0,
+      'dashboard_sidebar' => 0,
+      'dashboard_inactive' => 0,
+    ),
+  );
+  $overrides["context.home.reactions|region|spartan"]["DELETED"] = TRUE;
+
   // Exported overrides for: views_view
   $overrides["views_view.services.display|block_1|display_options|defaults"] = array(
     'fields' => FALSE,
