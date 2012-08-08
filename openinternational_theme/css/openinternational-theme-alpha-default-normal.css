@@ -20,6 +20,9 @@
     right: 0;
     top: 0;
 }
+#services-carousel {
+  width: 89% !important;
+}
 
 /*
  * Adjustments for thinner width
@@ -54,23 +57,3 @@ body.not-front div.openinternational-outside-wrapper div.container-16 #region-si
     width: 31%;
     width: 298px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
