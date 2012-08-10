@@ -1644,3 +1644,61 @@ div.node, div.block article {
 #region-sidebar-second div.field-name-field-editors-choice-node article h2 {
   padding-left: 0;
 }
+
+/*
+ * Home page views
+ */
+.view-id-press_releases .publication-left-col,
+.view-id-blogs .blog-date-icon {
+  width:50px;
+  float:left;
+  text-align: center;
+  height:50px;
+  background:rgba(242,101,34, 0.15);
+  border-radius: 4px;
+}
+.view-id-blogs .blogs-left-col {
+  float:left;
+  width:50px;
+}
+.view-id-blogs .blog-date-icon {
+  float:none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.view-id-blogs .views-field-entity-id-2 img.photo {
+  float:none;
+  margin:0;
+}
+.view-id-press_releases .publication-right-col,
+.view-id-blogs .blogs-right-col {
+  float: left;
+  width:83%;
+  margin-left:3%;
+}
+.view-id-blogs .view-content .date-tag .date,
+.view-id-press_releases .views-field-created,
+.view-id-blogs .views-field-created-1,
+.view-id-press_releases .views-field-created-1 {
+  font-size: 13px;
+  color:#444;
+  margin:0;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.view-id-blogs .view-content .date-tag,
+.view-id-press_releases .views-field-created {
+  line-height: 15px;
+  margin: 0;
+  padding: 9px 0 0;
+}
+.view-id-blogs .views-field-entity-id-1 {
+  font-size: 12px;
+  color:#959595;
+  margin-bottom: 5px;
+}
+.view-id-blogs h4.views-field-title,
+.view-id-press_releases .views-field-title h4 {
+  margin:0 0 10px;
+  line-height: 20px;
+}

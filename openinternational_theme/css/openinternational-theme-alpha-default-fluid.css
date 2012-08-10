@@ -8,3 +8,12 @@
 #services-carousel {
   width: 86% !important;
 }
+
+/*
+ * Home page views
+ */
+.view-id-press_releases .publication-right-col,
+.view-id-blogs .blogs-right-col {
+  width:70%;
+  margin-left:5%;
+}

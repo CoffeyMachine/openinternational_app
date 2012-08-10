@@ -95,11 +95,15 @@ function openinternational_theme_menu_tree($variables) {
 
 /* Add the 'clearfix' class to all unformatted views rows */
 function openinternational_theme_preprocess_views_view_unformatted(&$vars) { 
-
   foreach($vars['classes'] as &$rowclasses) {
     $rowclasses[] = 'clearfix';
   }
-		
+  foreach($vars['classes_array'] as &$rowclasses) {
+    $rowclasses .= ' clearfix';
+  }
+  foreach($vars['attributes_array']['class'] as &$rowclasses) {
+    $rowclasses .= ' clearfix';
+  }
 }
 
 
