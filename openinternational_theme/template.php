@@ -129,3 +129,48 @@ function openinternational_theme_preprocess_block(&$vars) {
 }
 */
 
+function openinternational_theme_preprocess_views_view_field(&$vars) {
+  static $authors ;
+  global $language;
+  if(($vars['view']->name == 'blogs')
+    && ($vars['view']->current_display == 'block_1')
+    && ($vars['field']->options['ui_name'] == 'Author Photo')
+  ) {
+    //Get the nid for the author 
+    //we need to check the global lang but also look for a undifined lang
+    $field_blog_author = $vars['row']->_field_data['nid']['entity']->field_blog_author;
+    $lang = isset($field_blog_author[$language->language]) ? $language : LANGUAGE_NONE;
+    $nid = isset($field_blog_author[$lang]) && !empty($field_blog_author[$lang]) ? $field_blog_author[$lang][0]['nid'] : FALSE;
+    // cache the author if we have got her before
+    if ($nid && !isset($authors[$nid]) 
+        && ($author = entity_load('node', array($nid)))
+        && ($author = $author[$nid])
+        && ($lang = isset($author->field_profile_photo[$language->language]) ? $language : LANGUAGE_NONE)
+        && isset($author->field_profile_photo[$lang])
+        && !empty($author->field_profile_photo[$lang])
+      ){
+      
+      $authors[$nid] = (object) array(
+        'title' => $author->title,
+        'uri' => $author->field_profile_photo[$lang][0]['uri']
+      );
+    }
+    // if we have an author get the image and theme it
+    if ($nid && isset($authors[$nid]) && $author = $authors[$nid]) {
+      $theme_data = array(
+        'style_name' => 'openinternational-list-page-thumbnail',
+        'path' => $author->uri,
+        'alt' => $author->title,
+        'title' => $author->title,
+        'attributes' => array(
+          'class' => 'photo',
+        ),
+      );
+      $vars['output'] = theme('image_style', $theme_data);
+    }
+    else {
+      $vars['output'] = '';
+    }
+
+  }
+}
