@@ -916,9 +916,16 @@ body.front div#zone-preface .block-twitter-pull h2 span {
   height: 0;
 }
 
-.footer-nav ul li.expanded, .footer-nav ul li.leaf {
+.footer-nav ul li.expanded,
+.footer-nav ul li.leaf,
+.footer-nav ul li.collapsed {
   list-style-type: none;
   list-style-image: none;
+}
+.footer-nav ul.menu li {
+  width: 14%;
+  padding:0;
+  margin-left:0;
 }
 
 .footer-utility li, .footer-nav li {
@@ -931,13 +938,13 @@ body.front div#zone-preface .block-twitter-pull h2 span {
   font-weight: bold;
 }
 
-.footer-nav li li {
+.footer-nav ul.menu li ul.menu li {
   float: none;
   margin-right: 0px;
   font-weight: normal;
-  width: 115px;
+  width: auto;
   letter-spacing: 0.02em;
-  margin: 10px 15px 10px 0;
+  padding: 2px 5px 2px 0;
   margin-bottom: 0px;
   text-shadow: none;
   text-transform: none;
@@ -963,12 +970,12 @@ body.front div#zone-preface .block-twitter-pull h2 span {
 .region-footer-first #block-nodeblock-footer-info {
   width:48%;
   float: left;
-  padding: 2%;
+  padding: 0 2%;
 }
 .region-footer-first #block-menu-menu-footer-utility {
   width:13%;
   float: left;
-  padding: 2%;
+  padding: 0 2%;
 }
 .region-footer-first #block-menu-menu-footer-utility ul li.leaf {
   list-style: none;
@@ -1050,18 +1057,8 @@ body.front .view-most-popular-content li.views-row {
   padding-left: 0;
 }
 
-#stay-connected {
-  padding: 0;
-  background: url("../img/opac_orange.png") repeat left top transparent;
-}
-
 #stay-connected h3 {
-  font-size: 16px;
-  text-transform: none;
-  font-weight: normal;
-  padding: 10px 0 17px 15px;
-  border-bottom: 1px solid #fff;
-  float: none;
+  display:none;
 }
 
 #stay-connected ul, #stay-connected li {
@@ -1070,20 +1067,15 @@ body.front .view-most-popular-content li.views-row {
   list-style-type: none;
 }
 
-#stay-connected ul {
-  padding: 0 0 10px 10px;
-}
-
 #stay-connected li {
-  float: left;
-  margin: 0;
+  float: right;
+  margin: 0 0 0 18px;
 }
 
 #region-sidebar-second #stay-connected li a, #stay-connected li a {
   width: 40px;
   height: 40px;
   text-indent: -9000px;
-  margin: 20px 5px 0 0;
   overflow: hidden;
   padding: 0;
 }
@@ -1102,6 +1094,9 @@ body.front .view-most-popular-content li.views-row {
 
 #stay-connected li.linkedin a, #stay-connected li.linkedin a:hover {
   background: url("../img/sprite.png") no-repeat scroll -120px 0 transparent;
+}
+#stay-connected li.this-site a, #stay-connected li.this-site a:hover {
+  background: url("../img/sprite.png") no-repeat scroll -240px 0 transparent;
 }
 
 body.front #region-content .region-inner {
