@@ -960,12 +960,44 @@ body.front div#zone-preface .block-twitter-pull h2 span {
   display: none;
 }
 
+.region-footer-first #block-nodeblock-footer-info {
+  width:48%;
+  float: left;
+  padding: 2%;
+}
+.region-footer-first #block-menu-menu-footer-utility {
+  width:13%;
+  float: left;
+  padding: 2%;
+}
+.region-footer-first #block-menu-menu-footer-utility ul li.leaf {
+  list-style: none;
+  margin:0;
+  padding:0;
+  
+}
+.region-footer-first #block-follow-site {
+  width:31%;
+  float: left;
+  padding:0;
+}
 .region-footer-first .address-location {
-  clear: both;
-  margin-top: 1px;
-  font-size: 0.917em;
-  padding: 15px 0 25px;
-  text-align: center;
+  padding: 0 0 50px 6%;
+  width:44%;
+  float:left;
+  background: url(../img/icon-pin.png) no-repeat top left;
+}
+.region-footer-first .footer-email {
+  padding: 0 0 15px 6%;
+  width:44%;
+  float:left;
+  background: url(../img/icon-mail.png) no-repeat top left;
+}
+.region-footer-first .footer-phone {
+  padding: 0 0 20px 6%;
+  width:44%;
+  float:left;
+  background: url(../img/icon-phone.png) no-repeat top left;
 }
 
 /***** Utility Nav *****/

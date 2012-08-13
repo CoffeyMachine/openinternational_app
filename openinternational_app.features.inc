@@ -5,6 +5,23 @@
  */
 
 /**
+ * Implements hook_content_defaults_alter().
+ */
+function openinternational_app_content_defaults_alter(&$data) {
+  if (isset($data['footer_info'])) {
+    $data['footer_info']->comment = '1'; /* WAS: '0' */
+    $data['footer_info']->field_editors_choice_summary['und']['0']['safe_value'] = '<div class="address-location">123 Main Street <br />Washington, DC 20036</div>
+    <div class="footer-email"><a href="mailto:info@example.gov">info@example.gov</a></div>
+    <div class="footer-phone">(202) 555-1212</div>
+    '; /* WAS: '<div class="address-location">123 Main Street Washington, DC 20036 | Email: <a href="mailto:info@example.gov">info@example.gov</a> | phone: (202)555-1212</div>
+    ' */
+    $data['footer_info']->field_editors_choice_summary['und']['0']['value'] = '<div class="address-location">123 Main Street <br>Washington, DC 20036</div>
+    <div class="footer-email"><a href="mailto:info@example.gov">info@example.gov</a></div>
+    <div class="footer-phone">(202) 555-1212</div>'; /* WAS: '<div class="address-location">123 Main Street Washington, DC 20036 | Email: info@example.gov | phone: (202)555-1212</div>' */
+  }
+}
+
+/**
  * Implements hook_context_default_contexts_alter().
  */
 function openinternational_app_context_default_contexts_alter(&$data) {
@@ -37,7 +54,22 @@ function openinternational_app_context_default_contexts_alter(&$data) {
         'dashboard_inactive' => 0,
       ),
     ); /* WAS: '' */
+    unset($data['home']->reactions['block']['blocks']['follow-site']);
     unset($data['home']->reactions['region']['spartan']);
+  }
+  if (isset($data['site_wide_after'])) {
+    $data['site_wide_after']->reactions['block']['blocks']['follow-site']['region'] = 'footer_first'; /* WAS: 'sidebar_second' */
+    $data['site_wide_after']->reactions['block']['blocks']['follow-site']['weight'] = '2'; /* WAS: '0' */
+    $data['site_wide_after']->reactions['block']['blocks']['menu-menu-footer-utility'] = array(
+      'module' => 'menu',
+      'delta' => 'menu-footer-utility',
+      'region' => 'footer_first',
+      'weight' => '1',
+    ); /* WAS: '' */
+    $data['site_wide_after']->reactions['block']['blocks']['nodeblock-footer_info']['weight'] = '0'; /* WAS: '-10' */
+  }
+  if (isset($data['site_wide_before'])) {
+    unset($data['site_wide_before']->reactions['block']['blocks']['openpublic_defaults-openpublic_footer_utility_menu']);
   }
 }
 

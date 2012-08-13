@@ -11,7 +11,18 @@ function openinternational_app_features_override_default_overrides() {
   // This code is only used for UI in features. Exported alters hooks do the magic.
   $overrides = array();
 
+  // Exported overrides for: content
+  $overrides["content.footer_info.comment"] = '1';
+  $overrides["content.footer_info.field_editors_choice_summary|und|0|safe_value"] = '<div class="address-location">123 Main Street <br />Washington, DC 20036</div>
+  <div class="footer-email"><a href="mailto:info@example.gov">info@example.gov</a></div>
+  <div class="footer-phone">(202) 555-1212</div>
+  ';
+  $overrides["content.footer_info.field_editors_choice_summary|und|0|value"] = '<div class="address-location">123 Main Street <br>Washington, DC 20036</div>
+  <div class="footer-email"><a href="mailto:info@example.gov">info@example.gov</a></div>
+  <div class="footer-phone">(202) 555-1212</div>';
+
   // Exported overrides for: context
+  $overrides["context.home.reactions|block|blocks|follow-site"]["DELETED"] = TRUE;
   $overrides["context.home.reactions|block|blocks|twitter_pull-0|delta"] = '0';
   $overrides["context.home.reactions|region|openinternational_theme"] = array(
     'disable' => array(
@@ -41,6 +52,16 @@ function openinternational_app_features_override_default_overrides() {
     ),
   );
   $overrides["context.home.reactions|region|spartan"]["DELETED"] = TRUE;
+  $overrides["context.site_wide_after.reactions|block|blocks|follow-site|region"] = 'footer_first';
+  $overrides["context.site_wide_after.reactions|block|blocks|follow-site|weight"] = '2';
+  $overrides["context.site_wide_after.reactions|block|blocks|menu-menu-footer-utility"] = array(
+    'module' => 'menu',
+    'delta' => 'menu-footer-utility',
+    'region' => 'footer_first',
+    'weight' => '1',
+  );
+  $overrides["context.site_wide_after.reactions|block|blocks|nodeblock-footer_info|weight"] = '0';
+  $overrides["context.site_wide_before.reactions|block|blocks|openpublic_defaults-openpublic_footer_utility_menu"]["DELETED"] = TRUE;
 
   // Exported overrides for: views_view
   $overrides["views_view.blogs.display|block_1|display_options|fields|created_1"] = array(
