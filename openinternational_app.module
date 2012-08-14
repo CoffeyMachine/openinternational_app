@@ -5,11 +5,3 @@
  */
 
 include_once 'openinternational_app.features.inc';
-
-/**
- * Implementation of hook_system_theme_info()
- */
-function openinternational_app_system_theme_info() {
-  $themes['openinternational_theme'] = drupal_get_path('module', 'openinternational_app') . '/openinternational_theme/openinternational_theme.info';
-  return $themes;
-}
