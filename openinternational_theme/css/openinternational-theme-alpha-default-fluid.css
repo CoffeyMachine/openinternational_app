@@ -10,6 +10,7 @@
 }
 #region-sidebar-second {
   background: #f6f6f6;
+  border-top:none;
   margin-top:-10px;
   margin-right:0;
   margin-bottom:-10px;
@@ -17,6 +18,11 @@
 }
 body.not-front #zone-content {
   background:#fff;
+}
+#block-addthis-addthis,
+#footer-logo-subscribe .logo,
+#footer-logo-subscribe .site-name {
+  display:block;
 }
 
 /*

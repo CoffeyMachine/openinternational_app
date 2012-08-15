@@ -5,6 +5,9 @@
 body.not-front #zone-content {
   background: url("../img/rightcolumnGradient.png") repeat-y right -15px #FFFFFF;
 }
+nav.navigation {
+  display:block;
+}
 .breaking-news span.read-more {
     display: block;
 }

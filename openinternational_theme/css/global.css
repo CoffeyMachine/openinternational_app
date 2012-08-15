@@ -409,9 +409,18 @@ body.not-front #zone-content {
    margin-right: 10px;
    */
 }
-
+/* Hide some stuff on the iphone */
+nav.navigation,
+#block-addthis-addthis,
+#footer-logo-subscribe .logo,
+#footer-logo-subscribe .site-name {
+  display:none;
+}
 body.front .zone-preface .block {
   padding: 0 0 15px;
+}
+#region-sidebar-second {
+  border-top:15px solid #f6f6f6;
 }
 
 img.photo {
@@ -649,6 +658,7 @@ div.tweets-pulled-listing a, div.tweets-pulled-listing .tweet-time a {
   right: 0;
   top: 0;
   width: 98%;
+  text-align: right;
 }
 
 .block-search-form h2 {
@@ -866,7 +876,8 @@ div.tweets-pulled-listing a, div.tweets-pulled-listing .tweet-time a {
 #footer-subscribe {
   position: relative;
   padding: 10px 0 0;
-  width: 380px;
+  width: 340px;
+  float:right;
 }
 
 #footer-subscribe .form-item, #footer-subscribe .form-actions {
