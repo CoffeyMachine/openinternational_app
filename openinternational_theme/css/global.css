@@ -412,8 +412,7 @@ body.not-front #zone-content {
 /* Hide some stuff on the iphone */
 nav.navigation,
 #block-addthis-addthis,
-#footer-logo-subscribe .logo,
-#footer-logo-subscribe .site-name {
+#footer-logo-subscribe {
   display:none;
 }
 body.front .zone-preface .block {
@@ -569,6 +568,7 @@ body.front div#zone-preface .block-twitter-pull h2 span {
 .breaking-news {
   border: none;
   background: #e1e1e1;
+  padding:0 3%;
 }
 .breaking-news .breaking-news-header {
   float: left;
@@ -576,6 +576,7 @@ body.front div#zone-preface .block-twitter-pull h2 span {
   border: 0 0 0 0;
   border-top: 0;
   padding: 0 0 0 0;
+  width:140px;
 }
 .breaking-news .breaking-news-header {
 
@@ -781,7 +782,7 @@ div.tweets-pulled-listing a, div.tweets-pulled-listing .tweet-time a {
   padding: 0;
   border: none;
   clear: both;
-  min-height: 500px;
+  min-height: 525px;
 }
 
 .home-rotator-slide {
@@ -793,9 +794,8 @@ div.tweets-pulled-listing a, div.tweets-pulled-listing .tweet-time a {
 
 .home-rotator-text-block {
   background: none;
-  margin: 2%;
-  padding: 0;
-  width: 96%;
+  padding: 4%;
+  width: 92%;
   height: auto;
   float: none;
   background: #f26522;
@@ -854,7 +854,6 @@ div.tweets-pulled-listing a, div.tweets-pulled-listing .tweet-time a {
 .home-rotator-photo img, .home-rotator-slide img {
   display: block;
   margin: 10px auto 0;
-  width: 96%;
 }
 
 #footer-logo-subscribe .logo {
@@ -947,14 +946,10 @@ div.tweets-pulled-listing a, div.tweets-pulled-listing .tweet-time a {
   list-style-image: none;
 }
 .footer-nav ul.menu li {
-  width: 14%;
-  padding:0;
-  margin-left:0;
+
 }
 
 .footer-utility li, .footer-nav li {
-  float: left;
-  margin: 0 10px 15px 0;
   font-size: 12px;
   letter-spacing: 0.02em;
   list-style: none;
@@ -997,7 +992,7 @@ div.tweets-pulled-listing a, div.tweets-pulled-listing .tweet-time a {
   padding: 0 2%;
 }
 .region-footer-first #block-menu-menu-footer-utility {
-  width:13%;
+  width:44%;
   float: left;
   padding: 0 2%;
 }
@@ -1008,26 +1003,19 @@ div.tweets-pulled-listing a, div.tweets-pulled-listing .tweet-time a {
   
 }
 .region-footer-first #block-follow-site {
-  width:31%;
-  float: left;
   padding:0;
+  clear:both;
 }
 .region-footer-first .address-location {
-  padding: 0 0 50px 6%;
-  width:44%;
-  float:left;
-  background: url(../img/icon-pin.png) no-repeat top left;
+  padding: 0 0 50px 16%;
+  background: url(../img/icon-pin.png) no-repeat 5px top;
 }
 .region-footer-first .footer-email {
-  padding: 0 0 15px 6%;
-  width:44%;
-  float:left;
+  padding: 0 0 15px 16%;
   background: url(../img/icon-mail.png) no-repeat top left;
 }
 .region-footer-first .footer-phone {
-  padding: 0 0 20px 6%;
-  width:44%;
-  float:left;
+  padding: 0 0 20px 16%;
   background: url(../img/icon-phone.png) no-repeat top left;
 }
 
@@ -1725,7 +1713,7 @@ div.node, div.block article {
 .view-id-press_releases .publication-right-col,
 .view-id-blogs .blogs-right-col {
   float: left;
-  width:83%;
+  width:80%;
   margin-left:3%;
 }
 .view-id-blogs .view-content .date-tag .date,

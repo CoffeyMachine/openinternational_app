@@ -20,8 +20,7 @@ body.not-front #zone-content {
   background:#fff;
 }
 #block-addthis-addthis,
-#footer-logo-subscribe .logo,
-#footer-logo-subscribe .site-name {
+#footer-logo-subscribe {
   display:block;
 }
 
@@ -32,4 +31,36 @@ body.not-front #zone-content {
 .view-id-blogs .blogs-right-col {
   width:70%;
   margin-left:5%;
+}
+.breaking-news {
+  padding: 0;
+}
+
+/*
+ * Footer
+ */
+.footer-nav ul.menu li {
+  width: 14%;
+  padding:0;
+  margin-left:0;
+}
+
+.footer-utility li, .footer-nav li {
+  float: left;
+  margin: 0 10px 15px 0;
+}
+.region-footer-first .address-location {
+  width:44%;
+  float:left;
+  padding: 0 0 20px 8%;
+}
+.region-footer-first .footer-email {
+  width:44%;
+  float:left;
+  padding: 0 0 20px 8%;
+}
+.region-footer-first .footer-phone {
+  width:44%;
+  float:left;
+  padding: 0 0 20px 8%;
 }

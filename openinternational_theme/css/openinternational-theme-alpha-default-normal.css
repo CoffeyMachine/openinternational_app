@@ -72,3 +72,24 @@ body.not-front div.openinternational-outside-wrapper div.container-16 #region-si
   width:280px;
   margin-left:10px
 }
+
+/*
+ * Footer
+ */
+.region-footer-first .address-location {
+  padding: 0 0 20px 6%;
+}
+.region-footer-first .footer-email {
+  padding: 0 0 20px 6%;
+}
+.region-footer-first .footer-phone {
+  padding: 0 0 20px 6%;
+}
+.region-footer-first #block-menu-menu-footer-utility {
+  width:13%;
+}
+.region-footer-first #block-follow-site {
+  width:31%;
+  float: left;
+  clear:none;
+}
