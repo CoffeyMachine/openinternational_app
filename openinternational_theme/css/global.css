@@ -500,10 +500,22 @@ body.front div#zone-preface .block-inner  h2 {
   padding: 10px 0;
   text-transform: capitalize;
 }
-
+.tweets-pulled-listing li {
+  margin: 0 0 20px;
+  font-size: 12px;
+  line-height: 1.5em;
+}
+.tweets-pulled-listing li span,
+.tweets-pulled-listing li div,
+div.tweets-pulled-listing a,
+div.tweets-pulled-listing .tweet-time a {
+  font-size:12px;
+}
+div.tweets-pulled-listing div.tweet-authorphoto {
+  margin: 0 10px 0 0;
+}
 div.tweets-pulled-listing a, div.tweets-pulled-listing .tweet-time a {
   color: #F26522;
-  font-size: 11px;
 }
 
 body.front div#zone-preface ul li {
