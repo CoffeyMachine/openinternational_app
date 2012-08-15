@@ -491,7 +491,9 @@ body.front .block h2.block-title, .block-twitter-pull .content h2 {
   margin: 0 0 20px;
   padding: 0 0 5px;
 }
-
+.leadership-section {
+    padding: 10px 20px;
+}
 body.front div#zone-preface .block-inner  h2 {
   background: url("../img/blockHeadlineUnderline.png") repeat-x scroll left bottom transparent;
   font-size: 22px;
@@ -1622,6 +1624,7 @@ div.node, div.block article {
 
 #region-sidebar-second h2 {
   padding: 10px 10px 8px 20px;
+  border-bottom: 1px solid #FFFFFF;
 }
 
 #region-sidebar-second .block {
