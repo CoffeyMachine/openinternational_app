@@ -2,6 +2,9 @@
 /*
  * Page backgrounds
  */
+body.not-front #zone-content {
+  background: url("../img/rightcolumnGradient.png") repeat-y right -15px #FFFFFF;
+}
 .breaking-news span.read-more {
     display: block;
 }

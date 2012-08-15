@@ -8,6 +8,16 @@
 #services-carousel {
   width: 86% !important;
 }
+#region-sidebar-second {
+  background: #f6f6f6;
+  margin-top:-10px;
+  margin-right:0;
+  margin-bottom:-10px;
+  width: 30.25%;
+}
+body.not-front #zone-content {
+  background:#fff;
+}
 
 /*
  * Home page views

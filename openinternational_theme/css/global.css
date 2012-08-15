@@ -402,7 +402,7 @@ body.front .zone-header, body.front .zone-preface, body.front .zone-content {
  */
 
 body.not-front #zone-content {
-  background: url("../img/rightcolumnGradient.png") repeat-y right -15px #FFFFFF;
+  background: #FFFFFF;
   border: 1px solid #e1e1e1;
   /*
    margin-left: 10px;
