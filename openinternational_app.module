@@ -15,3 +15,13 @@ function openinternational_app_enable() {
   theme_enable(array('openinternational_theme'));
   variable_set('theme_default', 'openinternational_theme');
 }
+
+/**
+ * Implements hook_disable()
+ * Restore the default theme to Bartik to avoid display errors
+ */
+function openinternational_app_disable() {
+  system_rebuild_theme_data();
+  theme_enable(array('bartik'));
+  variable_set('theme_default', 'bartik');
+}
