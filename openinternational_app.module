@@ -6,12 +6,12 @@
 
 include_once 'openinternational_app.features.inc';
 
-/*
+/**
  * Implements hook_enable()
  * Set the theme bundled with this app as the default theme
  */
 function openinternational_app_enable() {
   system_rebuild_theme_data();
-  theme_enable('openinternational_theme');
+  theme_enable(array('openinternational_theme'));
   variable_set('theme_default', 'openinternational_theme');
 }
